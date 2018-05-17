@@ -99,6 +99,23 @@ function sayName()
     writeLink("Taha Kamkar", "Google Me", searchUrl);
 }
 
+function sayTaha()
+{
+    let searchUrl = "https://www.google.com/search?q=taha+kamkar";
+
+    writeLink("Yep! That's me. Taha Kamkar" , "Google Me", searchUrl);
+}
+
+function sayDutymess()
+{
+    let searchUrl = "https://www.google.com/search?q=dutymess";
+
+    writeLink([
+        "'Dutymess' is my favorite online nickname.",
+        "The word refers to a mess-room on ships, where on-duty seafarers can have a quick meal."
+    ] , "Google It" , searchUrl);
+}
+
 function sayAge()
 {
     let thisYear = new Date().getFullYear();
@@ -184,6 +201,16 @@ function sayPrivacy()
     ];
 
     writeLink(text , "View it on Github" , "https://www.github.com/dutymess/taha-homepage");
+}
+
+function sayCode()
+{
+    writeLink("https://www.github.com/dutymess/taha-homepage" , "View it on Github")
+}
+
+function saySourceCode()
+{
+    sayCode();
 }
 
 function getList()

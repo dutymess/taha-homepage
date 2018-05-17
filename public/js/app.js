@@ -23,20 +23,24 @@ function run()
     if (typeof window[funcName] === "function") {
         window[funcName]();
         log(1);
-        resetInput();
         stopCounter();
         return;
     }
 
     log(0);
-    resetCounter();
-    write("Sorry", 'danger');
+    // resumeCounter();
+    resetInput();
+    write([
+        "Sorry! Undefined command '" + command + "' ",
+        "Try 'help' to have some ideas."
+    ], 'warning');
 }
 
 function log(was_valid)
 {
     $("#txtValid").val(was_valid);
     $('#form').ajaxSubmit();
+    resetInput();
 }
 
 
@@ -66,7 +70,7 @@ function showButton(url, label = 'Open')
     setTimeout(function ()
     {
         $("#btnOpen").html(label).attr('href', url).fadeIn('fast');
-    }, 1000);
+    }, 2000);
 }
 
 function hideButton()
@@ -117,7 +121,7 @@ function shuffle(array)
 
 function resetCounter()
 {
-    countDown = 60;
+    countDown = 15;
 }
 
 function runCounter()
@@ -127,6 +131,7 @@ function runCounter()
 
     setTimeout("runCounter()", 1000);
     countDown--;
+    // console.log(countDown);
 
     if (countDown == 0) {
         askHelp();
