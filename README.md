@@ -2,6 +2,6 @@
 ![AUR](https://img.shields.io/aur/license/yaourt.svg)
 
 
-A very simple personal homepage, made over night.
+A very simple personal homepage, made overnight.
 
 [dutymess.ir](http://www.dutymess.ir)
