@@ -20,6 +20,15 @@ function run()
 
     clear();
 
+    if (command.indexOf('?') >= 0 || command.indexOf('؟') >= 0) {
+        write([
+            "Thank you for your overestimation.",
+            "But this is not an artificial intelligence or something.",
+            "Try 'help' to have some ideas."
+        ], "warning");
+        return;
+    }
+
     if (typeof window[funcName] === "function") {
         window[funcName]();
         log(1);

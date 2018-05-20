@@ -1,3 +1,7 @@
+/*
+ Looking for something more complicated? Sorry :D
+ */
+
 function sayTwitter()
 {
     writeLink('https://twitter.com/dutymessIr', "Follow Me");
@@ -15,12 +19,25 @@ function sayLinkedIn()
 
 function sayBlog()
 {
-    writeLink('http://blog.dutymess.ir', "Read through");
+    writeLink([
+        'http://blog.dutymess.ir',
+        "Try 'virgool' too"
+    ], "Read through", 'http://blog.dutymess.ir');
+}
+
+function sayWeblog()
+{
+    sayBlog();
 }
 
 function sayVirgool()
 {
-    writeLink('https://virgoo.io/@dutymess', "Follow Me");
+    writeLink('https://virgool.io/@dutymess', "Follow Me");
+}
+
+function sayTelegram()
+{
+    writeLink("https://t.me/dutymess", "Let's talk :)");
 }
 
 function sayGithub()
@@ -87,7 +104,27 @@ function sayJob()
     ]);
 }
 
+function sayOcupation()
+{
+    sayJob();
+}
+
 function sayProfession()
+{
+    sayJob();
+}
+
+function sayWork()
+{
+    sayJob();
+}
+
+function saySkills()
+{
+    sayJob();
+}
+
+function saySkill()
 {
     sayJob();
 }
@@ -99,11 +136,30 @@ function sayName()
     writeLink("Taha Kamkar", "Google Me", searchUrl);
 }
 
+function sayTest()
+{
+    write("Thanks for the test.");
+    delayedHelp();
+}
+
+function sayHello()
+{
+    write("Hi");
+    delayedHelp();
+}
+
+function sayHi()
+{
+    write("Hello");
+    delayedHelp();
+}
+
+
 function sayTaha()
 {
     let searchUrl = "https://www.google.com/search?q=taha+kamkar";
 
-    writeLink("Yep! That's me. Taha Kamkar" , "Google Me", searchUrl);
+    writeLink("Yep! That's me. Taha Kamkar", "Google Me", searchUrl);
 }
 
 function sayDutymess()
@@ -113,7 +169,7 @@ function sayDutymess()
     writeLink([
         "'Dutymess' is my favorite online nickname.",
         "The word refers to a mess-room on ships, where on-duty seafarers can have a quick meal."
-    ] , "Google It" , searchUrl);
+    ], "Google It", searchUrl);
 }
 
 function sayAge()
@@ -153,6 +209,76 @@ function sayHelp()
     output[4] = '... etc.';
 
     write(output);
+}
+
+function sayOk()
+{
+    write("OK");
+}
+
+function delayedHelp()
+{
+    setTimeout("sayHelp()", 1000);
+}
+
+function sayNumber()
+{
+    write("Sorry, but not here, for the time being. :)", "warning")
+}
+
+function sayPhone()
+{
+    sayNumber();
+}
+
+function sayTel()
+{
+    sayNumber();
+}
+
+function sayMobile()
+{
+    sayNumber();
+}
+
+function sayFootball()
+{
+    write("Not a real fan :)");
+}
+
+function sayLocation()
+{
+    writeLink("#Yasnateam :)", "Show on Map", "https://goo.gl/maps/Zo7ape4hWeM2")
+}
+
+function sayAddress()
+{
+    sayLocation();
+}
+
+function sayNothing()
+{
+    write(":|");
+}
+
+function sayCv()
+{
+    sayResume();
+}
+
+function sayCV()
+{
+    sayResume();
+}
+
+function sayGender()
+{
+    write("Male");
+}
+
+function saySalam()
+{
+    write("Aleyk e Salam");
 }
 
 function say()
@@ -200,17 +326,25 @@ function sayPrivacy()
         "It's not that complicated. :)"
     ];
 
-    writeLink(text , "View it on Github" , "https://www.github.com/dutymess/taha-homepage");
+    writeLink(text, "View it on Github", "https://www.github.com/dutymess/taha-homepage");
 }
 
 function sayCode()
 {
-    writeLink("https://www.github.com/dutymess/taha-homepage" , "View it on Github")
+    writeLink("https://www.github.com/dutymess/taha-homepage", "View it on Github")
 }
 
 function saySourceCode()
 {
     sayCode();
+}
+
+function sayMarried()
+{
+    write([
+        "Yes!",
+        "Happily ever and after."
+    ]);
 }
 
 function getList()
@@ -231,6 +365,8 @@ function getList()
         'gmail',
         'socials',
         'resume',
-        'goodreads'
+        'goodreads',
+        'gender',
+        'address',
     ]);
 }
